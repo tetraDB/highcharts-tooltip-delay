@@ -11,9 +11,7 @@
             if (tooltip.isHidden || delayOnMove) {
                 clearTimeout(tooltip.showTimer);
                 tooltip.showTimer = setTimeout(function () {
-                    if (point === chart.hoverPoint || $.inArray(chart.hoverPoint, point) > -1) {
-                        proceed.apply(tooltip, Array.prototype.slice.call(refreshArguments, 1));
-                    }
+                    proceed.apply(tooltip, Array.prototype.slice.call(refreshArguments, 1));
                 }, delay);
             } else {
                 proceed.apply(tooltip, Array.prototype.slice.call(refreshArguments, 1));
